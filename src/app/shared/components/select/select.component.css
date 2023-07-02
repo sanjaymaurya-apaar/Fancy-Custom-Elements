@@ -1,0 +1,74 @@
+/* Add application styles & imports to this file! */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.select-menu {
+  /*	width: 380px;*/ /* Sanjay */
+  /*	margin: 150px auto;*/ /* Sanjay */
+  position: relative; /* Sanjay */
+  width: -moz-available; /* Sanjay */
+}
+
+.select-menu .select-btn {
+  display: flex;
+  height: 55px;
+  background: #fff;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.select-btn i {
+  font-size: 25px;
+  transition: 0.3s;
+}
+.select-menu.active .options {
+  display: block;
+  position: fixed; /* Sanjay */
+  z-index: 1; /* Sanjay */
+}
+.select-menu.active .select-btn i {
+  transform: rotate(-180deg);
+}
+.select-menu .options {
+  position: relative;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+  display: none;
+}
+
+.options .option {
+  display: flex;
+  height: 55px;
+  cursor: pointer;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.options .option:hover {
+  background: #f2f2f2;
+}
+
+.option i {
+  font-size: 25px;
+  margin-right: 12px;
+}
+
+.option .option-text {
+  font-size: 18px;
+}
